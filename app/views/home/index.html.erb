@@ -1,0 +1,15 @@
+<h1>Poke index</h1>
+  <% if current_user %>
+    Logged in as <%= current_user.email %>.
+    <%= link_to "Log Out", logout_path %>
+    <hr>
+    <%= link_to "Pokemon List", pokemon_list_path %>
+  <% else %>
+    <%= link_to "Sign Up", signup_path %> or
+    <%= link_to "Log In", login_path %>
+  <% end %>
+
+<p id="notice"><%= notice %></p>
+
+<p>All the Pokémon data you'll ever need in one place,
+easily accessible. </p>
